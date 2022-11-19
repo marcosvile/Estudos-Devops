@@ -1,0 +1,12 @@
+Log created: 2022-11-18T21:46:44.197730000Z
+Process ID:  49644 (0xc1ec)
+Parent PID:  1 (0x1)
+Executable:  /usr/lib/virtualbox/VBoxHeadless
+Arg[0]: /usr/lib/virtualbox/VBoxHeadless
+Arg[1]: --comment
+Arg[2]: vmubuntu_default_1668638965636_12205
+Arg[3]: --startvm
+Arg[4]: ef07f3e4-e5aa-45cb-9f13-6bde95fe42b5
+Arg[5]: --vrde
+Arg[6]: config
+AddRef: illegal refcnt=3221225469 state=2

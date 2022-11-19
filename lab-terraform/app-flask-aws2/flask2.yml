@@ -1,0 +1,24 @@
+- hosts: terraform-ansible
+  tasks:
+  - name: Instalando infraestrutura
+    apt:
+      pkg:
+      - python3
+      - git
+      - pip
+      update_cache: yes
+    become: yes
+  - name: Instalando flask
+    pip: name=flask
+    become: yes
+  - name: Instalando gunicorn
+    pip: name=gunicorn
+    become: yes
+  - name: Clonando repositorio
+    git:
+      repo: 'https://github.com/marcosvile/portfolio.git'
+      dest: /home/ubuntu/portfolio
+      clone: yes
+      force: yes
+  - name: Iniciando aplicação
+    shell: "cd /home/ubuntu/portfolio; nohup flask run --host=0.0.0.0 --port=8080 &"
