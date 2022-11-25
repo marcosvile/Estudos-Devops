@@ -1,0 +1,11 @@
+- hosts: ubuntu20
+  tasks:
+  - name: Update pacotes APT
+    ansible.builtin.apt:
+      update_cache: yes
+  - name: Upgrade pacotes APT
+    ansible.builtin.apt:
+      upgrade: full
+  - name: APT autoremove
+    ansible.builtin.apt:
+      autoremove: yes

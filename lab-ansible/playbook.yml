@@ -59,6 +59,8 @@
     copy:
       src: /home/marcos/Documentos/github/Estudos-Devops/lab-docker/app-node
       dest: /home/vagrant
+      rsync_opts:
+        - /node_modules
     become: yes
   - name: build docker app node
     community.docker.docker_image:
